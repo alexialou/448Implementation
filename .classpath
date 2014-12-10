@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="/Volumes/Disk/MacBook/Dropbox/UBC/cpsc/448/448Implementation/tmp/weka.jar" sourcepath="/Volumes/Disk/MacBook/Dropbox/UBC/cpsc/448/448Implementation/tmp/weka-src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/Volumes/Disk/MacBook/Dropbox/UBC/cpsc/448/448Implementation/tmp/doc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Volumes/Disk/MacBook/Dropbox/UBC/cpsc/448/448Implementation/tmp/commons-lang-2.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
