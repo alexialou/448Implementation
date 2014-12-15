@@ -6,14 +6,12 @@ Implementation of "Explore-by-Example: An Automatic Query Steering Framework for
 Independent study project by Alexia Lou, under supervision of Professor Rachel Pottinger at University of British Columbia
 
 
-Acceptable Input Format: 
-
+Acceptable Input Format:  
 1. local file format: Arff, C4.5, CSV, libsvm, svm light, Binary serialized instances, XRFF 
 2. 2. remote database server: MySQL
 
 
-Parameter Input (please also refer to highlighted area in the original paper for detail description):
-	
+Parameter Input (please also refer to highlighted area in the original paper for detail description):  
 	cluster base: number of clusters to divide the dataset into at the first iteration
 	cluster growth factor:  factor by which the number of cluster grow at each iteration
 	FN penalty: number of extra samples retrieved around each false negative data object 
