@@ -18,13 +18,13 @@ Independent study project by Alexia Lou, under supervision of Professor Rachel P
   * for dataset with size less than 5G, 
     1. please login [this page](http://skyserver.sdss3.org/casjobs/default.aspx) (see login.txt)
     2. select "DR9" under *Contest*
-    3. click \*[submit\*] to send query
+    3. click \[submit\] to send query
     4. retrieved dataset will be saved in "MyDB"   
-    5. to download the dataset: select "MyDB", then the table with to download, in the table detail on the right, click \*[download\*], then go to "Output"
+    5. to download the dataset: select "MyDB", then the table with to download, in the table detail on the right, click \[download\], then go to "Output"
 3. wait for data to be imported intp the program, after which a window will display with samples retrieved from the data base
-4. select relevant samples, click \*[confirm\*] [^1]  
+4. select relevant samples, click \[confirm\] [^1]  
 5. after the program finish retrieving next set of samples, another sample selection window will display, alone with another window displaying variable information about the model trained using current labeled samples
-6. press \*[exit\*] at any time to exit the program, labeled samples and trained model will be saved autometically in the directory where the program is saved.
+6. press \[exit\] at any time to exit the program, labeled samples and trained model will be saved autometically in the directory where the program is saved.
 
 
 
