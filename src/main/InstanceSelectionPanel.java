@@ -4,13 +4,13 @@ import weka.core.Instances;
 
 import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.GridLayout;
+//import java.awt.GridLayout;
 import java.awt.BorderLayout;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
+//import java.awt.event.ActionEvent;
 
 import javax.swing.JPanel;
-import javax.swing.JButton;
+//import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.JTableHeader;
@@ -19,7 +19,7 @@ import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
-import javax.swing.BorderFactory;
+//import javax.swing.BorderFactory;
 
 
 /**
@@ -144,9 +144,9 @@ public class InstanceSelectionPanel extends JPanel {
 		}
 	}
 
-	private JButton m_SelectAll = new JButton("All");
-	private JButton m_SelectNone = new JButton("None");
-	private JButton m_SelectInvert = new JButton("Invert");
+//	private JButton m_SelectAll = new JButton("All");
+//	private JButton m_SelectNone = new JButton("None");
+//	private JButton m_SelectInvert = new JButton("Invert");
 	@SuppressWarnings("serial")
 	private JTable m_Table = new JTable(){ 
 		@Override
@@ -161,41 +161,42 @@ public class InstanceSelectionPanel extends JPanel {
 	private InstanceTableModel m_Model;
 
 	public InstanceSelectionPanel() {
-		m_SelectAll.setEnabled(false);
-		m_SelectAll.setToolTipText("Select All");
-		m_SelectAll.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				m_Model.selectAll();
-			}
-		});
+//		m_SelectAll.setEnabled(false);
+//		m_SelectAll.setToolTipText("Select All");
+//		m_SelectAll.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				m_Model.selectAll();
+//			}
+//		});
+//
+//		m_SelectNone.setEnabled(false);
+//		m_SelectNone.setToolTipText("Select None");
+//		m_SelectNone.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				m_Model.selectNone();
+//			}
+//		});
+//
+//		m_SelectInvert.setEnabled(false);
+//		m_SelectInvert.setToolTipText("Select Invert");
+//		m_SelectInvert.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				m_Model.selectInvert();
+//			}
+//		});
 
-		m_SelectNone.setEnabled(false);
-		m_SelectNone.setToolTipText("Select None");
-		m_SelectNone.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				m_Model.selectNone();
-			}
-		});
-
-		m_SelectInvert.setEnabled(false);
-		m_SelectInvert.setToolTipText("Select Invert");
-		m_SelectInvert.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				m_Model.selectInvert();
-			}
-		});
-
+		setLayout(new BorderLayout());
 		m_Table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		m_Table.setColumnSelectionAllowed(false); 
 
-		JPanel jp = new JPanel();
-		jp.setBorder(BorderFactory.createEmptyBorder(10, 5, 10, 5));
-		jp.setLayout(new GridLayout(1, 3, 5, 5));
-		jp.add(m_SelectAll);
-		jp.add(m_SelectNone);
-		jp.add(m_SelectInvert);
-		setLayout(new BorderLayout());
-		add(jp, BorderLayout.PAGE_START);
+//		JPanel buttonPane = new JPanel();
+//		buttonPane.setBorder(BorderFactory.createEmptyBorder(10, 5, 10, 5));
+//		buttonPane.setLayout(new GridLayout(1, 3, 5, 5));
+//		buttonPane.add(m_SelectAll);
+//		buttonPane.add(m_SelectNone);
+//		buttonPane.add(m_SelectInvert);
+//		buttonPane.setMaximumSize(new Dimension(200, 50));
+//		add(buttonPane, BorderLayout.NORTH);
 
 		JPanel tablePane = new JPanel();
 		tablePane.setLayout(new BorderLayout());
@@ -221,9 +222,9 @@ public class InstanceSelectionPanel extends JPanel {
 			m_Model.setInstances(newInstances);
 			m_Table.clearSelection();
 		}
-		m_SelectAll.setEnabled(true);
-		m_SelectNone.setEnabled(true);
-		m_SelectInvert.setEnabled(true);
+//		m_SelectAll.setEnabled(true);
+//		m_SelectNone.setEnabled(true);
+//		m_SelectInvert.setEnabled(true);
 		m_Table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 		m_Table.revalidate();
 		m_Table.repaint();

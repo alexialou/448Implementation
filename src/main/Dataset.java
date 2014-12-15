@@ -26,7 +26,7 @@ public class Dataset{
 
 	private Instances sample;
 	private Instances train;
-	private Instances unlabeled;
+	private Instances prevUnexplored;
 	private Instances unexplored;
 	private static InstanceComparator compara;
 	private int discovSoFar;
@@ -34,7 +34,7 @@ public class Dataset{
 
 
 	public Dataset(Instances inst) throws Exception{
-		unlabeled = new Instances(inst);
+		prevUnexplored = new Instances(inst);
 		unexplored = new Instances(inst);
 		sample = new Instances(inst.stringFreeStructure());
 		train = new Instances(inst.stringFreeStructure());
@@ -58,7 +58,7 @@ public class Dataset{
 	 */
 	public Instances get(String type) {
 		if(type.equalsIgnoreCase("unlabeled")) 
-			return unlabeled;
+			return prevUnexplored;
 		else if(type.equalsIgnoreCase("unexplored")) 
 			return unexplored;
 		else if(type.equalsIgnoreCase("sample")) 
@@ -113,6 +113,7 @@ public class Dataset{
 				temp.instance(i).setClassValue("irrelevant");
 		}
 		train = copy(train, temp);
+		prevUnexplored = new Instances(unexplored);
 		setUnexplored(clust);
 	}
 
@@ -134,7 +135,7 @@ public class Dataset{
 	 * @throws Exception 
 	 */
 	public void resetSample() throws Exception{
-		unlabeled = remove(unlabeled, sample);
+		prevUnexplored = remove(prevUnexplored, sample);
 		unexplored = remove(unexplored, sample);
 		sample.delete();
 	}

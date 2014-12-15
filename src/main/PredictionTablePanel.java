@@ -6,11 +6,7 @@ import weka.core.Instances;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTable;
@@ -28,24 +24,10 @@ public class PredictionTablePanel extends JPanel{
 	private static final long serialVersionUID = -5482039011706390311L;
 
 	private JTable jt;
-	private JButton jb_print = new JButton("Print");
 
 	public PredictionTablePanel() {
 		super();
-		jb_print.setName("jb");
-		jb_print.setToolTipText("print");
 		setLayout(new BorderLayout());
-		add(jb_print, BorderLayout.PAGE_START);
-		jb_print.setEnabled(false);
-		jb_print.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try {
-					print();
-				} catch (Exception e1) {
-					JOptionPane.showMessageDialog(new JFrame(), e1.getMessage(), "Warning", JOptionPane.WARNING_MESSAGE);
-				}
-			}
-		});
 	}
 
 
@@ -108,13 +90,9 @@ public class PredictionTablePanel extends JPanel{
 			}
 		};
 		
-		JPanel tablePane = new JPanel();
-		tablePane.setLayout(new BorderLayout());
 		JTableHeader header = jt.getTableHeader();
-		tablePane.add(header,BorderLayout.PAGE_START);
-		tablePane.add(jt, BorderLayout.CENTER);
-		add(tablePane, BorderLayout.CENTER);
-		jb_print.setEnabled(true);
+		add(header,BorderLayout.PAGE_START);
+		add(jt, BorderLayout.CENTER);
 	}
 
 	public void print() throws Exception {

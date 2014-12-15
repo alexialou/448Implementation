@@ -22,7 +22,7 @@ public class Clusterer extends SimpleKMeans{
 	public Clusterer(int base, double factor) {
 		super();
 		this.k = (base<=5)? 20:base;
-		this.l = (factor<=1)? 1.1:factor;	
+		this.l = (factor<=1)? 1.5:factor;	
 	}
 		
 

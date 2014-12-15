@@ -17,7 +17,7 @@ import javax.swing.GroupLayout.Alignment;
 
 /**
  * UI class for passing user's parameter setting input
- * @author Macbook
+ * @author Alexia Lou
  *
  */
 public class ParameterDialog extends JDialog {
@@ -76,7 +76,7 @@ public class ParameterDialog extends JDialog {
 		m_BaseText.setToolTipText("cluster base (>5, default: 20)");
 		
 		m_GrowthLabel.setLabelFor(m_GrowthText);
-		m_GrowthText.setToolTipText("cluster growth factor (>1, default: 1.1)");
+		m_GrowthText.setToolTipText("cluster growth factor (>1, default: 1.5)");
 		
 		m_PaneltyLabel.setLabelFor(m_PaneltyText);
 		m_PaneltyText.setToolTipText("number of sample collected about each false nagetive (>1, default: 10)");

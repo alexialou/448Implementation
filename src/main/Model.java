@@ -1,6 +1,5 @@
 package main;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.regex.Matcher;
@@ -119,7 +118,6 @@ public class Model extends SimpleCart{
 		String[] nodes = parseNodes();
 		for(String s: nodes){
 			String[] parts = s.split("\\s+");
-			System.out.println(Arrays.toString(parts));
 			if(!hm.get(parts[0]).contains(Double.parseDouble(parts[2])))
 				hm.get(parts[0]).add(Double.parseDouble(parts[2]));
 		} 
