@@ -21,24 +21,22 @@ Parameter Input (please also refer to highlighted area in the original paper for
 
 Output:  
 * at each iteration:  
-- all samples labeled so far  
-- prediction stats of current classifier  
-- decision tree built based on current training data  
+  - all samples labeled so far  
+  - prediction stats of current classifier  
+  - decision tree built based on current training data  
 * when exit the program (stored in the same directory as the program files):  
-- trained classifier (output.model)  
-- training set labeled by user (train.csv)  
+  - trained classifier (output.model)  
+  - training set labeled by user (train.csv)  
 
 
 Other:  
 * The implementation is based on the optimized version of each space exploration phrase  
-
 * "Error, not in CLASSPATH?":    
 	please refer to the following web page for detail information  
 	http://weka.wikispaces.com/Trying+to+add+JDBC+driver...+-+Error,+not+in+CLASSPATH%3F  
-
 * Known cause(s) of exception:    
-1. if the original dataset has attribute named "class" or "cluster"  
-2. may throw exception for dataset containing non-numeric data  
+  1. if the original dataset has attribute named "class" or "cluster"  
+  2. may throw exception for dataset containing non-numeric data  
 	
 	
 Reference:  
