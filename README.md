@@ -57,8 +57,8 @@ Independent study project by Alexia Lou, under supervision of Professor Rachel P
 ####Other:  
 * The implementation is based on the optimized version of each space exploration phrase  
 * "Error, not in CLASSPATH?":    
-	please refer to the following web page for detail information  
-	http://weka.wikispaces.com/Trying+to+add+JDBC+driver...+-+Error,+not+in+CLASSPATH%3F  
+	please refer to [this web page](http://weka.wikispaces.com/Trying+to+add+JDBC+driver...+-+Error,+not+in+CLASSPATH%3F) for detail information  
+	
 * Known cause(s) of exception:    
   1. if the original dataset has attribute named "class" or "cluster"  
   2. may throw exception for dataset containing non-numeric data  
